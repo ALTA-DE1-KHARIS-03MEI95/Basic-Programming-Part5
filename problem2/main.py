@@ -1,5 +1,14 @@
 def pow(x, n):
-    return 0
+    if n < 0:
+        x = 1 / x
+        n = -n
+    result = 1
+    while n > 0:
+        if n % 2 == 1:
+            result *= x
+        x *= x
+        n //= 2
+    return result
 
 if __name__ == '__main__':
     print(pow(2, 3)) # 8
