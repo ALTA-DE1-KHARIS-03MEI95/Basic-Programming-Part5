@@ -3,7 +3,7 @@
 from collections import OrderedDict
 
 def join_array_remove_duplicate(arrayA, arrayB):
-    return list(set(OrderedDict.fromkeys(arrayA + arrayB)))
+    return list(dict.fromkeys(arrayA + arrayB))
 
 if __name__ == '__main__':
     # Test cases
